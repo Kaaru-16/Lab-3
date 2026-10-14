@@ -137,70 +137,25 @@ if (menuGrid) {
 }
 
 /* Pin Must Try Dishes while scrolling horizontally */
-const bestsellerWrapper =
-    document.querySelector('.bestsellers-scroll');
+const bestsellerWrapper = document.querySelector('.bestsellers-scroll');
+const bestsellerSection = document.querySelector('.bestsellers');
+const dishCarousel = document.querySelector('.dish-carousel');
 
-const bestsellerSection =
-    document.querySelector('.bestsellers');
+if (bestsellerSection && dishCarousel) {
+    let maxScroll = dishCarousel.scrollWidth - dishCarousel.clientWidth;
 
-const dishCarousel =
-    document.querySelector('.dish-carousel');
+    window.addEventListener('resize', () => {
+        maxScroll = dishCarousel.scrollWidth - dishCarousel.clientWidth;
+    });
+    bestsellerSection.addEventListener('mousemove', (e) => {
+        const rect = bestsellerSection.getBoundingClientRect();
+        // Get mouse X position relative to the section (0 to 1)
+        const mouseX = e.clientX - rect.left;
+        const percentage = Math.max(0, Math.min(1, mouseX / rect.width));
 
-if (bestsellerWrapper && bestsellerSection && dishCarousel) {
-
-    function updateDishScroll() {
-        // Total horizontal distance available
-        const maxScroll = Math.max(
-            0,
-            dishCarousel.scrollWidth - dishCarousel.clientWidth
-        );
-
-        // The section stays pinned while this wrapper scrolls
-        const sectionHeight = bestsellerSection.offsetHeight;
-
-        // Reserve enough vertical scrolling space
-        bestsellerWrapper.style.height =
-            `${sectionHeight + maxScroll}px`;
-
-        // How far the wrapper has moved above the viewport
-        const wrapperTop =
-            bestsellerWrapper.getBoundingClientRect().top;
-
-        // Convert vertical scrolling into horizontal progress
-        const scrollDistance = Math.max(
-            1,
-            bestsellerWrapper.offsetHeight - sectionHeight
-        );
-
-        const progress = Math.max(
-            0,
-            Math.min(1, -wrapperTop / scrollDistance)
-        );
-
-        // Move the dishes left
-        dishCarousel.scrollLeft = progress * maxScroll;
-    }
-
-    // Disable snapping so movement follows the scroll smoothly
-    dishCarousel.style.scrollSnapType = 'none';
-
-    window.addEventListener(
-        'scroll',
-        updateDishScroll,
-        { passive: true }
-    );
-
-    window.addEventListener(
-        'resize',
-        updateDishScroll
-    );
-
-    // Recalculate after the page and images finish loading
-    window.addEventListener(
-        'load',
-        updateDishScroll
-    );
-
-    updateDishScroll();
+        dishCarousel.scrollLeft = percentage * maxScroll;
+    });
 }
+
+
 

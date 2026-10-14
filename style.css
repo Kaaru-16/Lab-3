@@ -306,7 +306,10 @@ h1 {
 
 /* Bestsellers and dish carousel */
 .bestsellers-scroll {
-    position: relative;
+    position: absolute;
+    width: 100%;
+}
+.bestsellers {
     margin-top: calc(93 * var(--u));
 }
 
@@ -315,9 +318,10 @@ h1 {
     height: calc(790 * var(--u));
     background: var(--brown);
     color: white;
-    position: sticky;
-    top: 0;
-    padding-top: calc(80 * var(--u));
+    position: flex;
+    padding-top: calc(60 * var(--u));
+    top:0;
+    flex-direction: column;
 }
 
 .menu-heading {
@@ -344,9 +348,9 @@ h1 {
 
 .dish-carousel {
     display: flex;
-    gap: calc(40 * var(--u));
-    position: absolute;
-    top: calc(320 * var(--u));
+    gap: calc(34 * var(--u));
+    position: flex;
+    top: calc(233 * var(--u));
     left: 0;
     right: 0;
     height: calc(350 * var(--u));
@@ -355,6 +359,7 @@ h1 {
     scrollbar-width: none;
     scroll-snap-type: x mandatory;
     padding-top: calc(8 * var(--u));
+    scroll-behavior: smooth;
 }
 
 .dish-carousel::-webkit-scrollbar {
