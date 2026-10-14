@@ -132,4 +132,75 @@ if (menuGrid) {
         });
     });
     filterMenu(selectedCategory);
+
+
 }
+
+/* Pin Must Try Dishes while scrolling horizontally */
+const bestsellerWrapper =
+    document.querySelector('.bestsellers-scroll');
+
+const bestsellerSection =
+    document.querySelector('.bestsellers');
+
+const dishCarousel =
+    document.querySelector('.dish-carousel');
+
+if (bestsellerWrapper && bestsellerSection && dishCarousel) {
+
+    function updateDishScroll() {
+        // Total horizontal distance available
+        const maxScroll = Math.max(
+            0,
+            dishCarousel.scrollWidth - dishCarousel.clientWidth
+        );
+
+        // The section stays pinned while this wrapper scrolls
+        const sectionHeight = bestsellerSection.offsetHeight;
+
+        // Reserve enough vertical scrolling space
+        bestsellerWrapper.style.height =
+            `${sectionHeight + maxScroll}px`;
+
+        // How far the wrapper has moved above the viewport
+        const wrapperTop =
+            bestsellerWrapper.getBoundingClientRect().top;
+
+        // Convert vertical scrolling into horizontal progress
+        const scrollDistance = Math.max(
+            1,
+            bestsellerWrapper.offsetHeight - sectionHeight
+        );
+
+        const progress = Math.max(
+            0,
+            Math.min(1, -wrapperTop / scrollDistance)
+        );
+
+        // Move the dishes left
+        dishCarousel.scrollLeft = progress * maxScroll;
+    }
+
+    // Disable snapping so movement follows the scroll smoothly
+    dishCarousel.style.scrollSnapType = 'none';
+
+    window.addEventListener(
+        'scroll',
+        updateDishScroll,
+        { passive: true }
+    );
+
+    window.addEventListener(
+        'resize',
+        updateDishScroll
+    );
+
+    // Recalculate after the page and images finish loading
+    window.addEventListener(
+        'load',
+        updateDishScroll
+    );
+
+    updateDishScroll();
+}
+

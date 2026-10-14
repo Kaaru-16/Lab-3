@@ -28,7 +28,7 @@
     --ink: #1e1e1e;
     --u: calc(100vw / 1980);
     --scale: calc(100vw / 1980px);
-    --header-height: calc(133 * var(--u));
+    --header-height: calc(150 * var(--u));
 }
 
 /* Base styles */
@@ -305,17 +305,24 @@ h1 {
 }
 
 /* Bestsellers and dish carousel */
-.bestsellers {
+.bestsellers-scroll {
+    position: relative;
     margin-top: calc(93 * var(--u));
-    height: calc(613 * var(--u));
+}
+
+.bestsellers {
+    margin-top: 0;
+    height: calc(790 * var(--u));
     background: var(--brown);
     color: white;
-    position: relative;
-    padding-top: calc(60 * var(--u));
+    position: sticky;
+    top: 0;
+    padding-top: calc(80 * var(--u));
 }
 
 .menu-heading {
     margin-left: calc(148 * var(--u));
+    transform: translateY(calc(100 * var(--u)));
 }
 
 .menu-heading p {
@@ -339,7 +346,7 @@ h1 {
     display: flex;
     gap: calc(40 * var(--u));
     position: absolute;
-    top: calc(233 * var(--u));
+    top: calc(320 * var(--u));
     left: 0;
     right: 0;
     height: calc(350 * var(--u));
@@ -942,6 +949,16 @@ dialog p {
         width: calc(171px * 52 / 124);
     }
 
+    .bestsellers-scroll {
+    margin-top: 30px;
+    }
+
+    .bestsellers {
+    margin-top: 0;
+    height: 350px;
+    padding-top: 36px; 
+    }
+
     .browse-arrow img {
         zoom: calc(52 / 124);
     }
@@ -967,11 +984,19 @@ dialog p {
     }
 
     .dish-carousel {
-        top: 112px;
-        height: 190px;
-        gap: 18px;
-        padding: 4px 24px;
-    }
+    display: flex;
+    gap: calc(40 * var(--u));
+    position: absolute;
+    top: calc(233 * var(--u));
+    left: 0;
+    right: 0;
+    height: calc(350 * var(--u));
+    overflow-x: auto;
+    overflow-y: hidden;
+    scrollbar-width: none;
+    scroll-snap-type: x mandatory;
+    padding-top: calc(8 * var(--u));
+}
 
     .dish-card {
         flex-basis: 240px;
