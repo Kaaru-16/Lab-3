@@ -132,4 +132,30 @@ if (menuGrid) {
         });
     });
     filterMenu(selectedCategory);
+
+
 }
+
+/* Pin Must Try Dishes while scrolling horizontally */
+const bestsellerWrapper = document.querySelector('.bestsellers-scroll');
+const bestsellerSection = document.querySelector('.bestsellers');
+const dishCarousel = document.querySelector('.dish-carousel');
+
+if (bestsellerSection && dishCarousel) {
+    let maxScroll = dishCarousel.scrollWidth - dishCarousel.clientWidth;
+
+    window.addEventListener('resize', () => {
+        maxScroll = dishCarousel.scrollWidth - dishCarousel.clientWidth;
+    });
+    bestsellerSection.addEventListener('mousemove', (e) => {
+        const rect = bestsellerSection.getBoundingClientRect();
+        // Get mouse X position relative to the section (0 to 1)
+        const mouseX = e.clientX - rect.left;
+        const percentage = Math.max(0, Math.min(1, mouseX / rect.width));
+
+        dishCarousel.scrollLeft = percentage * maxScroll;
+    });
+}
+
+
+
