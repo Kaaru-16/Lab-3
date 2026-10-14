@@ -1,6 +1,6 @@
 // Home navigation: use dark text over light sections.
 const navbar = document.querySelector('.navbar');
-const darkSections = [...document.querySelectorAll('.hero, .bestsellers, footer')];
+const darkSections = [...document.querySelectorAll('.home-banner, .bestsellers, footer')];
 const aboutSection = document.getElementById('about');
 
 function updateNavigationColor() {
@@ -137,7 +137,6 @@ if (menuGrid) {
 }
 
 /* Pin Must Try Dishes while scrolling horizontally */
-const bestsellerWrapper = document.querySelector('.bestsellers-scroll');
 const bestsellerSection = document.querySelector('.bestsellers');
 const dishCarousel = document.querySelector('.dish-carousel');
 
@@ -156,6 +155,3 @@ if (bestsellerSection && dishCarousel) {
         dishCarousel.scrollLeft = percentage * maxScroll;
     });
 }
-
-
-

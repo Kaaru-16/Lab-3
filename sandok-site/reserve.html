@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Reserve a table — Sandok</title>
+  <meta name="description" content="Sandok — Filipino food, thoughtfully served in Makati.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mitr:wght@400&family=Young+Serif&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="site-header site-header--dark">
+  <nav class="nav-shell" aria-label="Main navigation">
+    <div class="nav-links nav-links--left" id="nav-left">
+      <a href="menu.html">Menu</a>
+      <a href="team.html">Meet the team</a>
+      <a href="getting-here.html">Getting here</a>
+    </div>
+    <a class="nav-brand" href="index.html" aria-label="Sandok home"><span class="brand">Sandok</span></a>
+    <div class="nav-links nav-links--right" id="nav-right">
+      <a href="contact.html">Contact</a>
+      <a class="nav-cta" href="reserve.html">Reserve a table</a>
+    </div>
+    <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false"><span></span><span></span></button>
+  </nav>
+</header>
+<section class="page-hero">
+  <p class="eyebrow">Make a reservation</p>
+  <h1>Save your seat.</h1>
+  <p>Tell us when you’re coming and who you’re bringing. We’ll take care of the rest.</p>
+</section>
+<main class="form-layout">
+  <div class="form-aside">
+    <p class="eyebrow">A few notes</p>
+    <h2>Gather around.</h2>
+    <p>Reservations are held for 15 minutes. For groups larger than eight, private dining, or special arrangements, please contact our team directly.</p>
+    <dl>
+      <div><dt>Lunch</dt><dd>11:00 AM–2:30 PM</dd></div>
+      <div><dt>Dinner</dt><dd>5:30 PM–10:00 PM</dd></div>
+      <div><dt>Closed</dt><dd>Mondays</dd></div>
+    </dl>
+  </div>
+  <form class="sandok-form" data-success="reserve-success">
+    <label>Full name<input name="name" autocomplete="name" required></label>
+    <label>Email address<input name="email" type="email" autocomplete="email" required></label>
+    <div class="field-row">
+      <label>Date<input name="date" type="date" required></label>
+      <label>Time<select name="time" required>
+        <option value="" disabled selected>Select time</option>
+        <option>11:30 AM</option><option>12:30 PM</option><option>1:30 PM</option>
+        <option>6:00 PM</option><option>7:30 PM</option><option>9:00 PM</option>
+      </select></label>
+    </div>
+    <label>Number of guests<select name="guests">
+      <option selected>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option>
+    </select></label>
+    <label>Anything we should know?<textarea name="notes" rows="4" placeholder="Celebrations, allergies, accessibility needs..."></textarea></label>
+    <button class="button button--orange" type="submit">Request a table <span aria-hidden="true">↗</span></button>
+  </form>
+  <div class="form-success" id="reserve-success" hidden>
+    <p class="eyebrow">Request received</p>
+    <h2>We’ll set the table.</h2>
+    <p>Thank you. Our reservations team will confirm your request by email shortly.</p>
+    <a class="button" href="index.html">Back to home <span aria-hidden="true">↗</span></a>
+  </div>
+</main>
+<footer>
+  <div class="footer-brand">
+    <span class="brand">Sandok</span>
+    <p>Filipino food, thoughtfully served.</p>
+  </div>
+  <div class="footer-contact">
+    <a href="contact.html">Contact us</a>
+    <a href="getting-here.html">Getting here</a>
+    <a href="privacy.html">Privacy policy</a>
+  </div>
+  <div class="footer-meta">
+    <p>© 2026 Sandok</p>
+    <p>Makati, Philippines</p>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
