@@ -585,6 +585,49 @@ address>div>span:last-child {
     margin-top: calc(26 * var(--u));
 }
 
+/* Reservation dialog */
+dialog {
+    width: min(440px, calc(100% - 32px));
+    border: 1px solid var(--brown);
+    padding: 36px;
+    background: var(--cream);
+    color: var(--ink);
+}
+
+dialog::backdrop {
+    background: #0009;
+}
+
+dialog h2 {
+    font-size: 28px;
+    margin: 12px 0;
+}
+
+dialog p {
+    font: 17px/1.5 Georgia, serif;
+}
+
+.dialog-close {
+    position: absolute;
+    right: 12px;
+    top: 8px;
+    background: none;
+    border: 0;
+    font-size: 28px;
+}
+
+.contact-action {
+    display: block;
+    margin-top: 18px;
+    padding: 12px;
+    border: 1px solid var(--brown);
+    font: 14px Mitr, sans-serif;
+}
+
+.contact-action:hover {
+    background: var(--orange);
+}
+
 /* Large screens */
 @media (min-width: 1980px) {
     :root {
