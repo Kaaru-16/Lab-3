@@ -1,0 +1,406 @@
+/* Home banner */
+.home-banner {
+    height: calc(1080 * var(--u));
+    position: relative;
+    color: white;
+    overflow: hidden;
+}
+
+/* Banner background */
+.banner-background {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+}
+
+.banner-background > img {
+    position: absolute;
+    width: 100.01%;
+    height: 228.95%;
+    left: .01%;
+    top: -80.45%;
+}
+
+.banner-background:after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: #000000a1;
+}
+
+/* Banner text and logo */
+.banner-text {
+    position: relative;
+    z-index: 2;
+    margin-left: calc(134 * var(--u));
+    padding-top: calc(225 * var(--u));
+    width: calc(778 * var(--u));
+}
+
+.banner-logo {
+    position: absolute;
+    left: calc(309 * var(--u));
+    top: calc(485.45 * var(--u));
+    width: calc(338.438 * var(--u));
+    height: calc(237.133 * var(--u));
+    object-fit: cover;
+}
+
+/* Browse Menu button */
+.browse-menu {
+    position: absolute;
+    top: calc(796.45 * var(--u));
+    left: 0;
+    width: calc(614 * var(--u));
+    height: calc(124 * var(--u));
+    border: 0;
+    box-shadow: inset 0 0 0 calc(2 * var(--u)) white;
+    padding-right: calc(171 * var(--u));
+    display: flex;
+    align-items: center;
+    font-family: 'Young Serif',serif;
+    font-size: calc(40 * var(--u));
+    filter: drop-shadow(0 4px 4.55px #0004);
+}
+
+.browse-menu > span:first-child {
+    width: 100%;
+    text-align: center;
+}
+
+.browse-arrow {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: calc(171 * var(--u));
+    overflow: hidden;
+}
+
+.browse-menu:hover, .browse-menu:focus-visible {
+    box-shadow: none;
+}
+
+.browse-menu:hover .browse-arrow, .browse-menu:focus-visible .browse-arrow {
+    background: var(--ink);
+}
+
+.browse-arrow .arrow-hover {
+    display: none;
+}
+
+.browse-menu:hover .arrow-default, .browse-menu:focus-visible .arrow-default {
+    display: none;
+}
+
+.browse-menu:hover .arrow-hover, .browse-menu:focus-visible .arrow-hover {
+    display: block;
+}
+
+/* Banner photo */
+.banner-photo {
+    position: absolute;
+    left: 40.3535%;
+    top: 9.259%;
+    width: 58.8384%;
+    height: 90.7407%;
+    overflow: hidden;
+}
+
+.banner-photo img {
+    position: absolute;
+    height: 205.13%;
+    width: 96.31%;
+    top: -48.09%;
+    left: -.56%;
+}
+
+/* Bestsellers and dish carousel */
+.bestsellers-scroll {
+    position: relative;
+    margin-top: calc(93 * var(--u));
+}
+
+.bestsellers {
+    margin-top: 0;
+    height: calc(790 * var(--u));
+    background: var(--brown);
+    color: white;
+    position: relative;
+    padding-top: calc(60 * var(--u));
+}
+
+.menu-heading {
+    margin-left: calc(148 * var(--u));
+    transform: translateY(calc(100 * var(--u)));
+}
+
+.menu-heading p {
+    font-family: Mitr, sans-serif;
+    color: var(--orange);
+    font-size: calc(30 * var(--u));
+    line-height: 1;
+}
+
+.menu-heading h2 {
+    margin-left: calc(5 * var(--u));
+    font-size: calc(90 * var(--u));
+    line-height: 1.4;
+}
+
+.menu-heading h2 span {
+    color: var(--orange);
+}
+
+.dish-carousel {
+    display: flex;
+    gap: calc(34 * var(--u));
+    position: absolute;
+    top: calc(320 * var(--u));
+    left: 0;
+    right: 0;
+    height: calc(350 * var(--u));
+    overflow-x: auto;
+    overflow-y: hidden;
+    scrollbar-width: none;
+    scroll-snap-type: x mandatory;
+    padding-top: calc(8 * var(--u));
+    scroll-behavior: smooth;
+}
+
+.dish-carousel::-webkit-scrollbar {
+    display: none;
+}
+
+.dish-card {
+    position: relative;
+    flex: 0 0 calc(447 * var(--u));
+    height: calc(319 * var(--u));
+    scroll-snap-align: start;
+}
+
+.dish-card:first-child {
+    margin-right: calc(17 * var(--u));
+}
+
+.dish-label {
+    position: absolute;
+    left: calc(-9 * var(--u));
+    top: calc(250.5 * var(--u));
+    width: calc(464 * var(--u));
+    height: calc(65 * var(--u));
+    overflow: hidden;
+}
+
+.dish-label > img {
+    position: absolute;
+    width: 100%;
+    height: 490.77%;
+    top: -390.77%;
+}
+
+.dish-label h3 {
+    position: relative;
+    margin-left: calc(37 * var(--u));
+    font: 400 calc(30 * var(--u))/1.5 'Young Serif', serif;
+}
+
+/* About Sandok */
+.about {
+    --about-space: 32px;
+    scroll-margin-top: calc(-1 * var(--header-height));
+    height: calc(1212 * var(--u) + var(--about-space));
+    position: relative;
+    text-align: center;
+    padding-top: calc(113 * var(--u) + var(--about-space));
+    font: calc(26 * var(--u))/1.2 'Minion Pro', 'Times New Roman', serif;
+}
+
+.about-logo {
+    height: calc(380 * var(--u));
+    font-size: calc(96 * var(--u));
+    line-height: 3.96;
+}
+
+.culture {
+    width: 68.64%;
+    margin: calc(1 * var(--u)) auto 0;
+}
+
+.serving-illustration {
+    position: absolute;
+    top: calc(543 * var(--u) + var(--about-space));
+    left: 35.56%;
+    width: 24.394%;
+    height: calc(364 * var(--u));
+    overflow: hidden;
+}
+
+.serving-illustration img {
+    position: absolute;
+    width: 116.65%;
+    height: 100%;
+    left: -8.28%;
+    top: 0;
+}
+
+.story {
+    position: absolute;
+    top: calc(873 * var(--u) + var(--about-space));
+    width: 74.19%;
+    left: 12.9%;
+}
+
+/* Frequently asked questions */
+.faqs {
+    height: calc(793 * var(--u));
+    display: grid;
+    grid-template-columns: 43.889% 56.111%;
+}
+
+.faq-heading {
+    background: var(--orange);
+    border: 1px solid var(--ink);
+    padding: calc(123 * var(--u)) 0 0 calc(115 * var(--u));
+}
+
+.faq-heading h2 {
+    font-size: calc(128 * var(--u));
+    line-height: 1.42;
+}
+
+.faq-content {
+    position: relative;
+    padding: calc(126 * var(--u)) calc(93 * var(--u)) 0 calc(94 * var(--u));
+    font-family: 'Minion Pro', 'Times New Roman', serif;
+    color: black;
+}
+
+.section-line {
+    position: absolute;
+    left: -1px;
+}
+
+.top-line {
+    top: 0;
+}
+
+.bottom-line {
+    bottom: 0;
+}
+
+.faq-list details {
+    height: calc(157 * var(--u));
+    position: relative;
+}
+
+.faq-list details:nth-child(3) {
+    height: calc(164 * var(--u));
+}
+
+.faq-list details:not([open]) {
+    height: calc(75 * var(--u));
+}
+
+.faq-list summary {
+    list-style: none;
+    cursor: pointer;
+    font-size: calc(26 * var(--u));
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+.faq-list summary::-webkit-details-marker {
+    display: none;
+}
+
+.faq-list p {
+    font-size: calc(24 * var(--u));
+    line-height: 1.2;
+    margin-top: calc(4 * var(--u));
+}
+
+.faq-divider {
+    position: absolute;
+    left: 0;
+    bottom: calc(32 * var(--u));
+}
+
+/* Footer */
+footer {
+    margin-top: calc(167 * var(--u));
+    height: calc(345 * var(--u));
+    background: var(--ink);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Mitr, sans-serif;
+}
+
+.footer-inner {
+    width: calc(1092 * var(--u));
+    display: flex;
+    align-items: center;
+    gap: calc(47 * var(--u));
+}
+
+.footer-logo {
+    width: calc(263 * var(--u));
+    height: calc(184 * var(--u));
+    object-fit: cover;
+    margin-right: calc(59 * var(--u));
+}
+
+.footer-divider {
+    width: 1px;
+    height: calc(173 * var(--u));
+    position: relative;
+    flex-shrink: 0;
+}
+
+.footer-divider img {
+    position: absolute;
+    transform: rotate(90deg);
+    transform-origin: 0 0;
+}
+
+address {
+    font-style: normal;
+    width: calc(327 * var(--u));
+    font-size: calc(16 * var(--u));
+    line-height: 1;
+    display: flex;
+    flex-direction: column;
+    gap: calc(9 * var(--u));
+    margin-left: calc(18 * var(--u));
+    flex-shrink: 0;
+}
+
+address > div {
+    display: flex;
+    align-items: center;
+    gap: calc(7 * var(--u));
+}
+
+address > div > span:last-child {
+    width: calc(310 * var(--u));
+    flex-shrink: 0;
+}
+
+.contact-icon {
+    flex: 0 0 calc(35 * var(--u));
+}
+
+.copyright {
+    align-self: flex-start;
+    padding-top: calc(20 * var(--u));
+    width: calc(237 * var(--u));
+    font-size: calc(16 * var(--u));
+    line-height: 1.2;
+    flex-shrink: 0;
+}
+
+.copyright p + p {
+    margin-top: calc(26 * var(--u));
+}

@@ -1,0 +1,159 @@
+/* Menu page */
+header.navbar-light {
+    height: calc(190 * var(--u));
+    background: var(--cream);
+    box-shadow: 0 4px 10.95px #0000000f;
+}
+
+.navbar-light .nav-logo {
+    width: calc(222 * var(--u));
+    font-size: calc(48 * var(--u));
+    line-height: 3.58;
+}
+
+.menu-main {
+    width: calc(1594 * var(--u));
+    margin: 0 auto;
+    padding-top: calc(204 * var(--u));
+    padding-bottom: 28px;
+}
+
+.menu-page-title {
+    color: var(--orange);
+    line-height: 1.4;
+}
+
+.menu-page-divider {
+    margin-bottom: calc(36 * var(--u));
+}
+
+.menu-layout {
+    display: grid;
+    grid-template-columns: calc(303 * var(--u)) 1fr;
+    gap: calc(43 * var(--u));
+}
+
+.menu-categories {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: calc(41 * var(--u));
+    min-height: calc(654 * var(--u));
+    padding: calc(32 * var(--u)) calc(37 * var(--u));
+    box-shadow: 0 4px 10.6px #00000026;
+}
+
+.category-button {
+    height: calc(49 * var(--u));
+    padding: 0;
+    border: 0;
+    background: transparent;
+    font: calc(32 * var(--u))/1.5 Mitr, sans-serif;
+    white-space: nowrap;
+}
+
+.category-button:hover, .category-button[aria-pressed="true"] {
+    color: var(--orange);
+}
+
+.menu-panel {
+    min-height: calc(650 * var(--u));
+    padding: calc(61 * var(--u)) calc(66 * var(--u));
+    box-shadow: 0 4px 10.6px #00000026;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: calc(27 * var(--u)) calc(65 * var(--u));
+}
+
+.menu-card {
+    position: relative;
+    height: calc(252 * var(--u));
+    cursor: pointer;
+}
+
+.menu-card .dish-photo {
+    height: calc(214 * var(--u));
+    margin: 0 calc(6 * var(--u));
+}
+
+.menu-card-label {
+    position: absolute;
+    top: calc(191 * var(--u));
+    left: 0;
+    width: 100%;
+    height: calc(61 * var(--u));
+    padding: calc(2 * var(--u)) calc(27 * var(--u));
+}
+
+.menu-card-label img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.menu-card-label h2 {
+    position: relative;
+    color: var(--orange);
+    font-size: calc(22 * var(--u));
+    line-height: 1.2;
+    white-space: nowrap;
+}
+
+.menu-card-label p {
+    position: relative;
+    color: white;
+    font: calc(18 * var(--u))/1.4 Mitr, sans-serif;
+}
+
+.menu-label-hover {
+    display: none;
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+}
+
+.menu-label-hover img {
+    inset: auto;
+    left: 0;
+    top: -390.77%;
+    width: 100%;
+    height: 490.77%;
+}
+
+.menu-card.is-hovered .menu-label-default {
+    display: none;
+}
+
+.menu-card.is-hovered .menu-label-hover {
+    display: block;
+}
+
+.menu-card.is-hovered .menu-card-label h2 {
+    color: white;
+}
+
+.menu-tools {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    margin-top: 24px;
+    font: 14px/1.5 Mitr, sans-serif;
+}
+
+.menu-tools select {
+    margin-left: 8px;
+    padding: 8px;
+    border: 1px solid var(--brown);
+    background: var(--cream);
+    color: var(--ink);
+    font: inherit;
+}
+
+.empty-menu {
+    font: 18px/1.5 Mitr, sans-serif;
+}
