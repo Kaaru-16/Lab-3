@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact — Sandok</title>
+  <meta name="description" content="Sandok — Filipino food, thoughtfully served in Makati.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mitr:wght@400&family=Young+Serif&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="site-header site-header--dark">
+  <nav class="nav-shell" aria-label="Main navigation">
+    <div class="nav-links nav-links--left" id="nav-left">
+      <a href="menu.html">Menu</a>
+      <a href="team.html">Meet the team</a>
+      <a href="getting-here.html">Getting here</a>
+    </div>
+    <a class="nav-brand" href="index.html" aria-label="Sandok home"><span class="brand">Sandok</span></a>
+    <div class="nav-links nav-links--right" id="nav-right">
+      <a href="contact.html" aria-current="page">Contact</a>
+      <a class="nav-cta" href="reserve.html">Reserve a table</a>
+    </div>
+    <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false"><span></span><span></span></button>
+  </nav>
+</header>
+<section class="page-hero">
+  <p class="eyebrow">Contact Sandok</p>
+  <h1>Let’s talk.</h1>
+  <p>Questions, celebrations, collaborations—send us a note and the right person from our team will get back to you.</p>
+</section>
+<main class="form-layout contact-layout">
+  <div class="form-aside">
+    <p class="eyebrow">Reach us directly</p>
+    <h2>We’re listening.</h2>
+    <dl>
+      <div><dt>General</dt><dd><a href="mailto:hello@sandok.com">hello@sandok.com</a></dd></div>
+      <div><dt>Private dining</dt><dd><a href="mailto:events@sandok.com">events@sandok.com</a></dd></div>
+      <div><dt>Telephone</dt><dd><a href="tel:+639178675365">+63 917 867 5365</a></dd></div>
+    </dl>
+  </div>
+  <form class="sandok-form" data-success="contact-success">
+    <label>Name<input name="name" autocomplete="name" required></label>
+    <label>Email address<input name="email" type="email" autocomplete="email" required></label>
+    <label>What is this about?<select name="subject">
+      <option selected>General question</option><option>Private dining</option><option>Press and partnerships</option><option>Feedback</option>
+    </select></label>
+    <label>Your message<textarea name="message" rows="6" required></textarea></label>
+    <button class="button button--orange" type="submit">Send message <span aria-hidden="true">↗</span></button>
+  </form>
+  <div class="form-success" id="contact-success" hidden>
+    <p class="eyebrow">Message sent</p>
+    <h2>Salamat.</h2>
+    <p>We’ll be in touch within two business days.</p>
+  </div>
+</main>
+<footer>
+  <div class="footer-brand">
+    <span class="brand">Sandok</span>
+    <p>Filipino food, thoughtfully served.</p>
+  </div>
+  <div class="footer-contact">
+    <a href="contact.html">Contact us</a>
+    <a href="getting-here.html">Getting here</a>
+    <a href="privacy.html">Privacy policy</a>
+  </div>
+  <div class="footer-meta">
+    <p>© 2026 Sandok</p>
+    <p>Makati, Philippines</p>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
