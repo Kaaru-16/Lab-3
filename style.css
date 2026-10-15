@@ -37,6 +37,7 @@
 }
 
 html {
+    overflow-x: clip;
     scroll-behavior: smooth;
     scroll-padding-top: var(--header-height);
 }
@@ -639,7 +640,6 @@ h1 {
         flex-direction: row;
         flex-wrap: wrap;
         gap: 8px 16px;
-        min-height: 0;
         padding: 16px;
     }
 

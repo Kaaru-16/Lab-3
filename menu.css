@@ -1,8 +1,6 @@
 /* Menu page */
 header.navbar-light {
     height: calc(190 * var(--u));
-    background: var(--cream);
-    box-shadow: 0 4px 10.95px #0000000f;
 }
 
 .navbar-light .nav-logo {
@@ -35,10 +33,10 @@ header.navbar-light {
 
 .menu-categories {
     display: flex;
+    align-self: start;
     flex-direction: column;
     align-items: flex-start;
     gap: calc(41 * var(--u));
-    min-height: calc(654 * var(--u));
     padding: calc(32 * var(--u)) calc(37 * var(--u));
     box-shadow: 0 4px 10.6px #00000026;
 }
