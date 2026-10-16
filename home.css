@@ -118,21 +118,21 @@
 /* Bestsellers and dish carousel */
 .bestsellers-scroll {
     position: relative;
-    margin-top: calc(93 * var(--u));
+    margin-top: calc(0 * var(--u));
 }
 
 .bestsellers {
     margin-top: 0;
-    height: calc(790 * var(--u));
+    height: calc(890 * var(--u));
     background: var(--brown);
     color: white;
     position: relative;
-    padding-top: calc(60 * var(--u));
+    padding-top: calc(80 * var(--u));
 }
 
 .menu-heading {
     margin-left: calc(148 * var(--u));
-    transform: translateY(calc(100 * var(--u)));
+    transform: translateY(calc(140 * var(--u)));
 }
 
 .menu-heading p {
@@ -156,7 +156,7 @@
     display: flex;
     gap: calc(34 * var(--u));
     position: absolute;
-    top: calc(320 * var(--u));
+    top: calc(400 * var(--u));
     left: 0;
     right: 0;
     height: calc(350 * var(--u));
