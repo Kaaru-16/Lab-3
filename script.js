@@ -3,19 +3,19 @@ const navbar = document.querySelector('.navbar');
 const darkSections = [...document.querySelectorAll('.home-banner, .bestsellers, footer')];
 const aboutSection = document.getElementById('about');
 
-function updateNavigationColor() {
-    const belowHeader = navbar.offsetHeight + 1;
-    const overDarkSection = darkSections.some(section => {
-        const bounds = section.getBoundingClientRect();
-        return bounds.top <= belowHeader && bounds.bottom > belowHeader;
-    });
-    navbar.classList.toggle('navbar-on-light', !overDarkSection);
-    const aboutBounds = aboutSection.getBoundingClientRect();
-    navbar.classList.toggle('navbar-in-about',
-        aboutBounds.top <= belowHeader && aboutBounds.bottom > belowHeader);
-}
-
 if (aboutSection) {
+    function updateNavigationColor() {
+        const belowHeader = navbar.offsetHeight + 1;
+        const overDarkSection = darkSections.some(section => {
+            const bounds = section.getBoundingClientRect();
+            return bounds.top <= belowHeader && bounds.bottom > belowHeader;
+        });
+        navbar.classList.toggle('navbar-on-light', !overDarkSection);
+        const aboutBounds = aboutSection.getBoundingClientRect();
+        navbar.classList.toggle('navbar-in-about',
+            aboutBounds.top <= belowHeader && aboutBounds.bottom > belowHeader);
+    }
+
     window.addEventListener('scroll', updateNavigationColor, { passive: true });
     window.addEventListener('resize', updateNavigationColor);
     updateNavigationColor();
@@ -31,15 +31,11 @@ if (aboutSection) {
 // Reservations on both pages.
 const reservationDialog = document.getElementById('reservation-dialog');
 
-function openReservation() {
-    reservationDialog.showModal();
-}
-
 function closeReservation() {
     reservationDialog.close();
 }
 
-document.querySelector('.reservation-button').addEventListener('click', openReservation);
+document.querySelector('.reservation-button').addEventListener('click', () => reservationDialog.showModal());
 document.querySelector('.dialog-close').addEventListener('click', closeReservation);
 reservationDialog.addEventListener('click', event => {
     if (event.target !== reservationDialog) return;
@@ -87,13 +83,9 @@ if (menuGrid) {
             setDishHover(card, false);
             if (!card.hidden) count++;
         });
-        categories.forEach(category => {
-            const selected = category === button;
-            category.setAttribute('aria-pressed', String(selected));
-            category.style.color = selected ? 'var(--orange)' : '';
-        });
+        categories.forEach(category => category.setAttribute('aria-pressed', String(category === button)));
         emptyMenu.hidden = count > 0;
-        updateMenuStatus(button.textContent, count);
+        updateMenuStatus(button.textContent.trim(), count);
     }
 
     function sortMenu() {
@@ -110,18 +102,14 @@ if (menuGrid) {
     sortSelect.addEventListener('change', sortMenu);
 
     cards.forEach(card => {
-        card.addEventListener('mouseover', () => setDishHover(card, true));
-        card.addEventListener('mouseout', event => {
-            if (!card.contains(event.relatedTarget) && card.dataset.hoverPinned !== 'true') {
-                setDishHover(card, false);
-            }
+        card.addEventListener('mouseenter', () => setDishHover(card, true));
+        card.addEventListener('mouseleave', () => {
+            if (card.dataset.hoverPinned !== 'true') setDishHover(card, false);
         });
-        card.addEventListener('focusin', () => setDishHover(card, true));
-        card.addEventListener('focusout', event => {
-            if (!card.contains(event.relatedTarget)) {
-                card.dataset.hoverPinned = 'false';
-                setDishHover(card, false);
-            }
+        card.addEventListener('focus', () => setDishHover(card, true));
+        card.addEventListener('blur', () => {
+            card.dataset.hoverPinned = 'false';
+            setDishHover(card, false);
         });
         card.addEventListener('click', () => toggleDishHover(card));
         card.addEventListener('keydown', event => {
@@ -132,26 +120,20 @@ if (menuGrid) {
         });
     });
     filterMenu(selectedCategory);
-
-
 }
 
-/* Pin Must Try Dishes while scrolling horizontally */
+// Scroll Must Try Dishes with the pointer.
 const bestsellerSection = document.querySelector('.bestsellers');
 const dishCarousel = document.querySelector('.dish-carousel');
 
 if (bestsellerSection && dishCarousel) {
-    let maxScroll = dishCarousel.scrollWidth - dishCarousel.clientWidth;
-
-    window.addEventListener('resize', () => {
-        maxScroll = dishCarousel.scrollWidth - dishCarousel.clientWidth;
-    });
-    bestsellerSection.addEventListener('mousemove', (e) => {
+    bestsellerSection.addEventListener('mousemove', event => {
         const rect = bestsellerSection.getBoundingClientRect();
         // Get mouse X position relative to the section (0 to 1)
-        const mouseX = e.clientX - rect.left;
+        const mouseX = event.clientX - rect.left;
         const percentage = Math.max(0, Math.min(1, mouseX / rect.width));
 
+        const maxScroll = dishCarousel.scrollWidth - dishCarousel.clientWidth;
         dishCarousel.scrollLeft = percentage * maxScroll;
     });
 }
