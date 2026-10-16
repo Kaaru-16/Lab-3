@@ -1,5 +1,8 @@
 /* Menu page */
 header.navbar-light {
+    position: absolute;
+    top: 0;
+    z-index: 20;
     height: calc(190 * var(--u));
 }
 
@@ -139,18 +142,11 @@ header.navbar-light {
     white-space: nowrap;
 }
 
-.menu-card:hover .menu-card-label,
-.menu-card:focus-visible .menu-card-label,
-.menu-card.is-hovered .menu-card-label {
+.menu-card:is(:hover, :focus-visible, .is-hovered) .menu-card-label {
     background: #ffaa55;
 }
 
-.menu-card:hover .menu-card-label h2,
-.menu-card:hover .menu-card-label p,
-.menu-card:focus-visible .menu-card-label h2,
-.menu-card:focus-visible .menu-card-label p,
-.menu-card.is-hovered .menu-card-label h2,
-.menu-card.is-hovered .menu-card-label p {
+.menu-card:is(:hover, :focus-visible, .is-hovered) .menu-card-label :is(h2, p) {
     color: #642900;
 }
 
@@ -174,83 +170,4 @@ header.navbar-light {
 
 .empty-menu {
     font: 18px/1.5 Mitr, sans-serif;
-}
-
-/* Footer */
-footer {
-    margin-top: calc(167 * var(--u));
-    height: calc(345 * var(--u));
-    background: var(--ink);
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: Mitr, sans-serif;
-}
-
-.footer-inner {
-    width: calc(1092 * var(--u));
-    display: flex;
-    align-items: center;
-    gap: calc(47 * var(--u));
-}
-
-.footer-logo {
-    width: calc(263 * var(--u));
-    height: calc(184 * var(--u));
-    object-fit: cover;
-    margin-right: calc(59 * var(--u));
-}
-
-.footer-divider {
-    width: 1px;
-    height: calc(173 * var(--u));
-    position: relative;
-    flex-shrink: 0;
-}
-
-.footer-divider img {
-    position: absolute;
-    transform: rotate(90deg);
-    transform-origin: 0 0;
-}
-
-address {
-    font-style: normal;
-    width: calc(327 * var(--u));
-    font-size: calc(16 * var(--u));
-    line-height: 1;
-    display: flex;
-    flex-direction: column;
-    gap: calc(9 * var(--u));
-    margin-left: calc(18 * var(--u));
-    flex-shrink: 0;
-}
-
-address > div {
-    display: flex;
-    align-items: center;
-    gap: calc(7 * var(--u));
-}
-
-address > div > span:last-child {
-    width: calc(310 * var(--u));
-    flex-shrink: 0;
-}
-
-.contact-icon {
-    flex: 0 0 calc(35 * var(--u));
-}
-
-.copyright {
-    align-self: flex-start;
-    padding-top: calc(20 * var(--u));
-    width: calc(237 * var(--u));
-    font-size: calc(16 * var(--u));
-    line-height: 1.2;
-    flex-shrink: 0;
-}
-
-.copyright p + p {
-    margin-top: calc(26 * var(--u));
 }
