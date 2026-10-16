@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="theme-color" content="#4a2400">
-        <meta name="description" content="Browse Sandok's Filipino dishes, soup specials, and desserts.">
-        <title>Menu | Sandok</title>
-        <link rel="icon" type="image/svg+xml" href="image/site-logo.svg">
-        <link rel="stylesheet" href="menu.css">
-        <link rel="stylesheet" href="style.css">
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#4a2400">
+    <meta name="description" content="Browse Sandok's Filipino dishes, soup specials, and desserts.">
+
+    <title>Menu | Sandok</title>
+
+    <link rel="icon" type="image/svg+xml" href="image/ICON.png">
+    <link rel="stylesheet" href="menu.css">
+    <link rel="stylesheet" href="style.css">
+</head>
 
     <body>
         <a class="skip-link" href="#main">Skip to content</a>
@@ -87,41 +89,63 @@
                 <section class="menu-panel" aria-label="Dishes">
                     <div class="menu-grid" id="menu-grid">
 
-                        <!-- BULALO -->
-                        <article class="menu-card"
-                                 tabindex="0"
-                                 data-categories="soup beef"
-                                 data-price="485"
-                                 role="button"
-                                 aria-label="Highlight Bulalo"
-                                 aria-pressed="false">
-                            <div class="dish-photo bulalo">
-                                <img src="image/bulalo.png" alt="Bulalo">
-                            </div>
+                    <!-- BULALO -->
+                    <article
+                        class="menu-card"
+                        tabindex="0"
+                        data-categories="soup beef"
+                        data-price="350"
+                        role="button"
+                        aria-label="Highlight Bulalo"
+                        aria-pressed="false">
 
-                            <div class="menu-card-label">
-                                <h2>Bulalo</h2>
-                                <p>₱485</p>
-                            </div>
-                        </article>
+                        <div class="dish-photo bulalo">
+                            <img src="image/bulalo.png" alt="Bulalo">
+                        </div>
 
-                        <!-- LA PAZ BATCHOY -->
-                        <article class="menu-card"
-                                 tabindex="0"
-                                 data-categories="soup"
-                                 data-price="555"
-                                 role="button"
-                                 aria-label="Highlight La Paz Batchoy"
-                                 aria-pressed="false">
-                            <div class="dish-photo batchoy">
-                                <img src="image/batchoy.png" alt="La Paz Batchoy">
-                            </div>
+                        <div class="menu-card-label">
+                            <img
+                                class="menu-label-default"
+                                src="image/menu-label.png"
+                                alt="">
 
-                            <div class="menu-card-label">
-                                <h2>La Paz Batchoy</h2>
-                                <p>₱555</p>
-                            </div>
-                        </article>
+                            <span class="menu-label-hover">
+                                <img src="image/dish-label.png" alt="">
+                            </span>
+
+                            <h2>Bulalo</h2>
+                            <p>₱350</p>
+                        </div>
+                    </article>
+
+                    <!-- LA PAZ BATCHOY -->
+                    <article
+                        class="menu-card"
+                        tabindex="0"
+                        data-categories="soup"
+                        data-price="350"
+                        role="button"
+                        aria-label="Highlight La Paz Batchoy"
+                        aria-pressed="false">
+
+                        <div class="dish-photo batchoy">
+                            <img src="image/batchoy.png" alt="La Paz Batchoy">
+                        </div>
+
+                        <div class="menu-card-label">
+                            <img
+                                class="menu-label-default"
+                                src="image/menu-label.png"
+                                alt="">
+
+                            <span class="menu-label-hover">
+                                <img src="image/dish-label.png" alt="">
+                            </span>
+
+                            <h2>La Paz Batchoy</h2>
+                            <p>₱350</p>
+                        </div>
+                    </article>
 
                         <!-- SINIGANG NA BAKA -->
                         <article class="menu-card"
@@ -141,23 +165,34 @@
                             </div>
                         </article>
 
-                        <!-- KARE-KARE -->
-                        <article class="menu-card"
-                                 tabindex="0"
-                                 data-categories="soup beef"
-                                 data-price="395"
-                                 role="button"
-                                 aria-label="Highlight Kare-Kare"
-                                 aria-pressed="false">
-                            <div class="dish-photo">
-                                <img src="image/kare-kare.png" alt="Kare-Kare">
-                            </div>
+                    <!-- KARE-KARE -->
+                    <article
+                        class="menu-card"
+                        tabindex="0"
+                        data-categories="soup beef"
+                        data-price="300"
+                        role="button"
+                        aria-label="Highlight Kare-Kare"
+                        aria-pressed="false">
 
-                            <div class="menu-card-label">
-                                <h2>Kare-Kare</h2>
-                                <p>₱395</p>
-                            </div>
-                        </article>
+                        <div class="dish-photo">
+                            <img src="image/kare-kare.png" alt="Kare-Kare">
+                        </div>
+
+                        <div class="menu-card-label">
+                            <img
+                                class="menu-label-default"
+                                src="image/menu-label.png"
+                                alt="">
+
+                            <span class="menu-label-hover">
+                                <img src="image/dish-label.png" alt="">
+                            </span>
+
+                            <h2>Kare-Kare</h2>
+                            <p>₱300</p>
+                        </div>
+                    </article>
 
                         <!-- ARROZ CALDO -->
                         <article class="menu-card"
@@ -177,16 +212,18 @@
                             </div>
                         </article>
 
-                        <article class="menu-card"
-                                 tabindex="0"
-                                 data-categories="chicken"
-                                 data-price="255"
-                                 role="button"
-                                 aria-label="Highlight Pritong Manok"
-                                 aria-pressed="false">
-                            <div class="dish-photo arroz">
-                                <img src="image/manok.jpg" alt="Pritong Manok">
-                            </div>
+                    <article
+                        class="menu-card"
+                        tabindex="0"
+                        data-categories="chicken"
+                        data-price="255"
+                        role="button"
+                        aria-label="Highlight Arroz Caldo"
+                        aria-pressed="false">
+
+                        <div class="dish-photo arroz">
+                            <img src="image/manok.jpg" alt="Pritong Manok">
+                        </div>
 
                             <div class="menu-card-label">
                                 <h2>Pritong Manok</h2>
@@ -232,36 +269,53 @@
                             </div>
                         </article>
 
-                        <!-- GARLIC BUTTER SHRIMP -->
-                        <article class="menu-card"
-                                 tabindex="0"
-                                 data-categories="seafood"
-                                 data-price="395"
-                                 hidden
-                                 role="button"
-                                 aria-label="Highlight Buttered Shrimp"
-                                 aria-pressed="false">
-                            <div class="dish-photo">
-                                <img src="image/garlic-butter-shrimp.png" alt="Garlic Butter Shrimp">
-                            </div>
+                    <!-- GARLIC BUTTER SHRIMP -->
+                    <article
+                        class="menu-card"
+                        tabindex="0"
+                        data-categories="seafood"
+                        data-price="290"
+                        hidden
+                        role="button"
+                        aria-label="Highlight Garlic Butter Shrimp"
+                        aria-pressed="false">
 
-                            <div class="menu-card-label">
-                                <h2>Buttered Shrimp</h2>
-                                <p>₱395</p>
-                            </div>
-                        </article>
+                        <div class="dish-photo">
+                            <img
+                                src="image/garlic-butter-shrimp.png"
+                                alt="Garlic Butter Shrimp">
+                        </div>
 
-                        <article class="menu-card"
-                                 tabindex="0"
-                                 data-categories="seafood"
-                                 data-price="250"
-                                 hidden
-                                 role="button"
-                                 aria-label="Highlight Inihaw na Salmon"
-                                 aria-pressed="false">
-                            <div class="dish-photo">
-                                <img src="image/grilled-salmon.jpg" alt="Grilled Salmon">
-                            </div>
+                        <div class="menu-card-label">
+                            <img
+                                class="menu-label-default"
+                                src="image/menu-label.png"
+                                alt="">
+
+                            <span class="menu-label-hover">
+                                <img src="image/dish-label.png" alt="">
+                            </span>
+
+                            <h2>Buttered Shrimp</h2>
+                            <p>₱290</p>
+                        </div>
+                    </article>
+
+                    <article
+                        class="menu-card"
+                        tabindex="0"
+                        data-categories="seafood"
+                        data-price="250"
+                        hidden
+                        role="button"
+                        aria-label="Highlight Garlic Butter Shrimp"
+                        aria-pressed="false">
+
+                        <div class="dish-photo">
+                            <img
+                                src="image/grilled-salmon.jpg"
+                                alt="Grilled Salmon">
+                        </div>
 
                             <div class="menu-card-label">
                                 <h2>Inihaw na Salmon</h2>
@@ -269,17 +323,21 @@
                             </div>
                         </article>
 
-                        <article class="menu-card"
-                                 tabindex="0"
-                                 data-categories="soup seafood"
-                                 data-price="280"
-                                 hidden
-                                 role="button"
-                                 aria-label="Highlight Sinigang na Hipon"
-                                 aria-pressed="false">
-                            <div class="dish-photo">
-                                <img src="image/sinigang-hipon.avif" alt="Sinigang na Hipon">
-                            </div>
+                    <article
+                        class="menu-card"
+                        tabindex="0"
+                        data-categories="soup seafood"
+                        data-price="280"
+                        hidden
+                        role="button"
+                        aria-label="Highlight Garlic Butter Shrimp"
+                        aria-pressed="false">
+
+                        <div class="dish-photo">
+                            <img
+                                src="image/sinigang-hipon.avif"
+                                alt="Sinigang na Hipon">
+                        </div>
 
                             <div class="menu-card-label">
                                 <h2>Sinigang na Hipon</h2>
@@ -287,17 +345,21 @@
                             </div>
                         </article>
 
-                        <article class="menu-card"
-                                 tabindex="0"
-                                 data-categories="soup chicken"
-                                 data-price="200"
-                                 hidden
-                                 role="button"
-                                 aria-label="Highlight Tinolang Manok"
-                                 aria-pressed="false">
-                            <div class="dish-photo">
-                                <img src="image/tinolang-manok.jpg" alt="Tinolang Manok">
-                            </div>
+                    <article
+                        class="menu-card"
+                        tabindex="0"
+                        data-categories="soup chicken"
+                        data-price="200"
+                        hidden
+                        role="button"
+                        aria-label="Highlight Garlic Butter Shrimp"
+                        aria-pressed="false">
+
+                        <div class="dish-photo">
+                            <img
+                                src="image/tinolang-manok.jpg"
+                                alt="Tinolang Manok">
+                        </div>
 
                             <div class="menu-card-label">
                                 <h2>Tinolang Manok</h2>
@@ -305,17 +367,21 @@
                             </div>
                         </article>
 
-                        <article class="menu-card"
-                                 tabindex="0"
-                                 data-categories="seafood soup"
-                                 data-price="260"
-                                 hidden
-                                 role="button"
-                                 aria-label="Highlight Sinigang na Isda"
-                                 aria-pressed="false">
-                            <div class="dish-photo">
-                                <img src="image/sinigang-bangus.jpg" alt="Sinigang na Bangus">
-                            </div>
+                    <article
+                        class="menu-card"
+                        tabindex="0"
+                        data-categories="seafood soup"
+                        data-price="260"
+                        hidden
+                        role="button"
+                        aria-label="Highlight Garlic Butter Shrimp"
+                        aria-pressed="false">
+
+                        <div class="dish-photo">
+                            <img
+                                src="image/sinigang-bangus.jpg"
+                                alt="Sinigang na Bangus">
+                        </div>
 
                             <div class="menu-card-label">
                                 <h2>Sinigang na Isda</h2>
@@ -323,17 +389,21 @@
                             </div>
                         </article>
 
-                        <article class="menu-card"
-                                 tabindex="0"
-                                 data-categories="soup seafood"
-                                 data-price="230"
-                                 hidden
-                                 role="button"
-                                 aria-label="Highlight Ginataang Pusit"
-                                 aria-pressed="false">
-                            <div class="dish-photo">
-                                <img src="image/ginataang-pusit.png" alt="Ginataang Pusit">
-                            </div>
+                    <article
+                        class="menu-card"
+                        tabindex="0"
+                        data-categories="soup seafood"
+                        data-price="230"
+                        hidden
+                        role="button"
+                        aria-label="Highlight Garlic Butter Shrimp"
+                        aria-pressed="false">
+
+                        <div class="dish-photo">
+                            <img
+                                src="image/ginataang-pusit.png"
+                                alt="Ginataang Pusit">
+                        </div>
 
                             <div class="menu-card-label">
                                 <h2>Ginataang Pusit</h2>
@@ -395,35 +465,145 @@
                             </div>
                         </article>
 
-                        <article class="menu-card"
-                                 tabindex="0"
-                                 data-categories="sides"
-                                 data-price="50"
-                                 hidden
-                                 role="button"
-                                 aria-label="Highlight Chicarong Bulaklak"
-                                 aria-pressed="false">
-                            <div class="dish-photo">
-                                <img src="image/bulaklak.png" alt="Chicarong Bulaklak">
-                            </div>
+                    <article
+                        class="menu-card"
+                        tabindex="0"
+                        data-categories="sides"
+                        data-price="50"
+                        hidden
+                        role="button"
+                        aria-label="Highlight Garlic Butter Shrimp"
+                        aria-pressed="false">
 
-                            <div class="menu-card-label">
-                                <h2>Chicarong Bulaklak</h2>
-                                <p>₱50</p>
-                            </div>
-                        </article>
+                        <div class="dish-photo">
+                            <img
+                                src="image/bulaklak.png"
+                                alt="Chicarong Bulaklak">
+                        </div>
 
-                        <article class="menu-card"
-                                 tabindex="0"
-                                 data-categories="dessert"
-                                 data-price="60"
-                                 hidden
-                                 role="button"
-                                 aria-label="Highlight Leche Flan"
-                                 aria-pressed="false">
-                            <div class="dish-photo">
-                                <img src="image/leche-flan.jpg" alt="Leche Flan">
-                            </div>
+                        <div class="menu-card-label">
+                            <img
+                                class="menu-label-default"
+                                src="image/menu-label.png"
+                                alt="">
+
+                            <span class="menu-label-hover">
+                                <img src="image/dish-label.png" alt="">
+                            </span>
+
+                            <h2>Chicarong Bulaklak</h2>
+                            <p>₱50</p>
+                        </div>
+                    </article>
+
+                    <article
+                        class="menu-card"
+                        tabindex="0"
+                        data-categories="sides"
+                        data-price="20"
+                        hidden
+                        role="button"
+                        aria-label="Highlight Garlic Butter Shrimp"
+                        aria-pressed="false">
+
+                        <div class="dish-photo">
+                            <img
+                                src="image/how-to-cook-perfect-rice-118.png"
+                                alt="Kanin">
+                        </div>
+
+                        <div class="menu-card-label">
+                            <img
+                                class="menu-label-default"
+                                src="image/menu-label.png"
+                                alt="">
+
+                            <span class="menu-label-hover">
+                                <img src="image/dish-label.png" alt="">
+                            </span>
+
+                            <h2>Kanin</h2>
+                            <p>₱20</p>
+                        </div>
+                    </article>
+
+                    <article
+                        class="menu-card"
+                        tabindex="0"
+                        data-categories="sides"
+                        data-price="25"
+                        hidden
+                        role="button"
+                        aria-label="Highlight Garlic Butter Shrimp"
+                        aria-pressed="false">
+
+                        <div class="dish-photo">
+                            <img
+                                src="image/Filipino-Sinangag-Garlic-Fried-Rice-min.jpg"
+                                alt="Sinangag">
+                        </div>
+
+                        <div class="menu-card-label">
+                            <img
+                                class="menu-label-default"
+                                src="image/menu-label.png"
+                                alt="">
+
+                            <span class="menu-label-hover">
+                                <img src="image/dish-label.png" alt="">
+                            </span>
+
+                            <h2>Sinangag</h2>
+                            <p>₱25</p>
+                        </div>
+                    </article>
+
+                    <article
+                        class="menu-card"
+                        tabindex="0"
+                        data-categories="sides"
+                        data-price="25"
+                        hidden
+                        role="button"
+                        aria-label="Highlight Garlic Butter Shrimp"
+                        aria-pressed="false">
+
+                        <div class="dish-photo">
+                            <img
+                                src="image/talulo.jpg"
+                                alt="Talulo">
+                        </div>
+
+                        <div class="menu-card-label">
+                            <img
+                                class="menu-label-default"
+                                src="image/menu-label.png"
+                                alt="">
+
+                            <span class="menu-label-hover">
+                                <img src="image/dish-label.png" alt="">
+                            </span>
+
+                            <h2>Talulo</h2>
+                            <p>₱25</p>
+                        </div>
+                    </article>
+
+                    <article
+                        class="menu-card"
+                        tabindex="0"
+                        data-categories="dessert"
+                        data-price="60"
+                        hidden
+                        role="button"
+                        aria-label="Highlight Garlic Butter Shrimp"
+                        aria-pressed="false">
+
+                        <div class="dish-photo">
+                            <img
+                                src="image/leche-flan.jpg"
+                                alt="Leche Flan">
+                        </div>
 
                             <div class="menu-card-label">
                                 <h2>Leche Flan</h2>
@@ -431,17 +611,21 @@
                             </div>
                         </article>
 
-                        <article class="menu-card"
-                                 tabindex="0"
-                                 data-categories="dessert"
-                                 data-price="60"
-                                 hidden
-                                 role="button"
-                                 aria-label="Highlight Maja Blanca"
-                                 aria-pressed="false">
-                            <div class="dish-photo">
-                                <img src="image/maja.jpg" alt="Maja Blanca">
-                            </div>
+                    <article
+                        class="menu-card"
+                        tabindex="0"
+                        data-categories="dessert"
+                        data-price="60"
+                        hidden
+                        role="button"
+                        aria-label="Highlight Garlic Butter Shrimp"
+                        aria-pressed="false">
+
+                        <div class="dish-photo">
+                            <img
+                                src="image/maja.jpg"
+                                alt="Maja Blanca">
+                        </div>
 
                             <div class="menu-card-label">
                                 <h2>Maja Blanca</h2>
@@ -449,17 +633,21 @@
                             </div>
                         </article>
 
-                        <article class="menu-card"
-                                 tabindex="0"
-                                 data-categories="dessert"
-                                 data-price="60"
-                                 hidden
-                                 role="button"
-                                 aria-label="Highlight Ube Halaya"
-                                 aria-pressed="false">
-                            <div class="dish-photo">
-                                <img src="image/halaya.webp" alt="Ube Halaya">
-                            </div>
+                    <article
+                        class="menu-card"
+                        tabindex="0"
+                        data-categories="dessert"
+                        data-price="60"
+                        hidden
+                        role="button"
+                        aria-label="Highlight Garlic Butter Shrimp"
+                        aria-pressed="false">
+
+                        <div class="dish-photo">
+                            <img
+                                src="image/halaya.webp"
+                                alt="Ube Halaya">
+                        </div>
 
                             <div class="menu-card-label">
                                 <h2>Ube Halaya</h2>
@@ -467,17 +655,21 @@
                             </div>
                         </article>
 
-                        <article class="menu-card"
-                                 tabindex="0"
-                                 data-categories="dessert"
-                                 data-price="45"
-                                 hidden
-                                 role="button"
-                                 aria-label="Highlight Pastillas"
-                                 aria-pressed="false">
-                            <div class="dish-photo">
-                                <img src="image/Pastillas-de-leche-1600x1080.jpg" alt="Pastillas">
-                            </div>
+                    <article
+                        class="menu-card"
+                        tabindex="0"
+                        data-categories="dessert"
+                        data-price="45"
+                        hidden
+                        role="button"
+                        aria-label="Highlight Garlic Butter Shrimp"
+                        aria-pressed="false">
+
+                        <div class="dish-photo">
+                            <img
+                                src="image/Pastillas-de-leche-1600x1080.jpg"
+                                alt="Pastillas">
+                        </div>
 
                             <div class="menu-card-label">
                                 <h2>Pastillas</h2>
@@ -485,17 +677,21 @@
                             </div>
                         </article>
 
-                        <article class="menu-card"
-                                 tabindex="0"
-                                 data-categories="dessert"
-                                 data-price="40"
-                                 hidden
-                                 role="button"
-                                 aria-label="Highlight Biko"
-                                 aria-pressed="false">
-                            <div class="dish-photo">
-                                <img src="image/biko.jpg" alt="Biko">
-                            </div>
+                    <article
+                        class="menu-card"
+                        tabindex="0"
+                        data-categories="dessert"
+                        data-price="40"
+                        hidden
+                        role="button"
+                        aria-label="Highlight Garlic Butter Shrimp"
+                        aria-pressed="false">
+
+                        <div class="dish-photo">
+                            <img
+                                src="image/biko.jpg"
+                                alt="Biko">
+                        </div>
 
                             <div class="menu-card-label">
                                 <h2>Biko</h2>
@@ -503,17 +699,21 @@
                             </div>
                         </article>
 
-                        <article class="menu-card"
-                                 tabindex="0"
-                                 data-categories="beverages"
-                                 data-price="40"
-                                 hidden
-                                 role="button"
-                                 aria-label="Highlight Sago't Gulaman"
-                                 aria-pressed="false">
-                            <div class="dish-photo">
-                                <img src="image/sago-at-gulaman.jpg" alt="Sago't Gulaman">
-                            </div>
+                    <article
+                        class="menu-card"
+                        tabindex="0"
+                        data-categories="beverages"
+                        data-price="40"
+                        hidden
+                        role="button"
+                        aria-label="Highlight Garlic Butter Shrimp"
+                        aria-pressed="false">
+
+                        <div class="dish-photo">
+                            <img
+                                src="image/sago-at-gulaman.jpg"
+                                alt="Sago't Gulaman">
+                        </div>
 
                             <div class="menu-card-label">
                                 <h2>Sago't Gulaman</h2>
@@ -521,17 +721,21 @@
                             </div>
                         </article>
 
-                        <article class="menu-card"
-                                 tabindex="0"
-                                 data-categories="beverages"
-                                 data-price="40"
-                                 hidden
-                                 role="button"
-                                 aria-label="Highlight Calamansi Juice"
-                                 aria-pressed="false">
-                            <div class="dish-photo">
-                                <img src="image/calamansi.jpg" alt="Calamansi Juice">
-                            </div>
+                    <article
+                        class="menu-card"
+                        tabindex="0"
+                        data-categories="beverages"
+                        data-price="40"
+                        hidden
+                        role="button"
+                        aria-label="Highlight Garlic Butter Shrimp"
+                        aria-pressed="false">
+
+                        <div class="dish-photo">
+                            <img
+                                src="image/calamansi.jpg"
+                                alt="Calamansi Juice">
+                        </div>
 
                             <div class="menu-card-label">
                                 <h2>Calamansi Juice</h2>
@@ -539,17 +743,21 @@
                             </div>
                         </article>
 
-                        <article class="menu-card"
-                                 tabindex="0"
-                                 data-categories="beverages"
-                                 data-price="40"
-                                 hidden
-                                 role="button"
-                                 aria-label="Highlight Buko Juice"
-                                 aria-pressed="false">
-                            <div class="dish-photo">
-                                <img src="image/buko.webp" alt="Buko Juice">
-                            </div>
+                    <article
+                        class="menu-card"
+                        tabindex="0"
+                        data-categories="beverages"
+                        data-price="40"
+                        hidden
+                        role="button"
+                        aria-label="Highlight Garlic Butter Shrimp"
+                        aria-pressed="false">
+
+                        <div class="dish-photo">
+                            <img
+                                src="image/buko.webp"
+                                alt="Buko Juice">
+                        </div>
 
                             <div class="menu-card-label">
                                 <h2>Buko Juice</h2>
@@ -557,17 +765,21 @@
                             </div>
                         </article>
 
-                        <article class="menu-card"
-                                 tabindex="0"
-                                 data-categories="beverages"
-                                 data-price="30"
-                                 hidden
-                                 role="button"
-                                 aria-label="Highlight Kapeng Barako"
-                                 aria-pressed="false">
-                            <div class="dish-photo">
-                                <img src="image/thepinoywarrior-kapeng-barako.jpg" alt="Kapeng Barako">
-                            </div>
+                    <article
+                        class="menu-card"
+                        tabindex="0"
+                        data-categories="beverages"
+                        data-price="30"
+                        hidden
+                        role="button"
+                        aria-label="Highlight Garlic Butter Shrimp"
+                        aria-pressed="false">
+
+                        <div class="dish-photo">
+                            <img
+                                src="image/thepinoywarrior-kapeng-barako.jpg"
+                                alt="Kapeng Barako">
+                        </div>
 
                             <div class="menu-card-label">
                                 <h2>Kapeng Barako</h2>
@@ -575,17 +787,21 @@
                             </div>
                         </article>
 
-                        <article class="menu-card"
-                                 tabindex="0"
-                                 data-categories="beverages"
-                                 data-price="40"
-                                 hidden
-                                 role="button"
-                                 aria-label="Highlight Melon Juice"
-                                 aria-pressed="false">
-                            <div class="dish-photo">
-                                <img src="image/melon.jpg" alt="Melon Juice">
-                            </div>
+                    <article
+                        class="menu-card"
+                        tabindex="0"
+                        data-categories="beverages"
+                        data-price="40"
+                        hidden
+                        role="button"
+                        aria-label="Highlight Garlic Butter Shrimp"
+                        aria-pressed="false">
+
+                        <div class="dish-photo">
+                            <img
+                                src="image/melon.jpg"
+                                alt="Melon Juice">
+                        </div>
 
                             <div class="menu-card-label">
                                 <h2>Melon Juice</h2>
@@ -593,17 +809,21 @@
                             </div>
                         </article>
 
-                        <article class="menu-card"
-                                 tabindex="0"
-                                 data-categories="beverages"
-                                 data-price="30"
-                                 hidden
-                                 role="button"
-                                 aria-label="Highlight Chaa / Tea"
-                                 aria-pressed="false">
-                            <div class="dish-photo">
-                                <img src="image/tea.webp" alt="Tea">
-                            </div>
+                    <article
+                        class="menu-card"
+                        tabindex="0"
+                        data-categories="beverages"
+                        data-price="30"
+                        hidden
+                        role="button"
+                        aria-label="Highlight Garlic Butter Shrimp"
+                        aria-pressed="false">
+
+                        <div class="dish-photo">
+                            <img
+                                src="image/tea.webp"
+                                alt="Tea">
+                        </div>
 
                             <div class="menu-card-label">
                                 <h2>Chaa / Tea</h2>
@@ -618,19 +838,65 @@
                 </section>
             </div>
 
-            <!-- SORTING AND MENU STATUS -->
-            <div class="menu-tools">
-                <p id="menu-status" aria-live="polite">Showing 5 dishes in Soup Specials.</p>
-                <label for="menu-sort">
-                    Sort dishes
-                    <select id="menu-sort">
-                        <option value="default">Menu order</option>
-                        <option value="low">Price: low to high</option>
-                        <option value="high">Price: high to low</option>
-                    </select>
-                </label>
+        <!-- SORTING AND MENU STATUS -->
+        <div class="menu-tools">
+            <p id="menu-status" aria-live="polite">
+                Showing 5 dishes in Soup Specials.
+            </p>
+
+            <label for="menu-sort">
+                Sort dishes
+
+                <select id="menu-sort">
+                    <option value="default">Menu order</option>
+                    <option value="low">Price: low to high</option>
+                    <option value="high">Price: high to low</option>
+                </select>
+            </label>
+        </div>
+    </main>
+
+    <!-- FOOTER  -->
+    <footer>
+        <div class="footer-inner">
+            <a href="#home" aria-label="Sandok home">
+                <img class="footer-logo" src="image/sandok.png" alt="Sandok">
+            </a>
+            <div class="footer-divider">
+                <img src="image/footer-line.svg" alt="">
             </div>
-        </main>
+            <address>
+                <div>
+                    <span class="contact-icon">
+                        <img src="image/location.svg" alt="">
+                    </span>
+                    <span>
+                        Skibidi Toilet Avenue, Corner Fanum Tax Boulevard,
+                        Dasmariñas, Cavite
+                    </span>
+                </div>
+                <div>
+                    <span class="contact-icon">
+                        <img src="image/phone.svg" alt="">
+                    </span>
+                    <a href="tel:+639784678676">0978-467-8676</a>
+                </div>
+                <div>
+                    <span class="contact-icon">
+                        <img src="image/email.svg" alt="">
+                    </span>
+                    <a href="mailto:hello@sandok.com">hello@sandok.com</a>
+                </div>
+            </address>
+            <div class="footer-divider">
+                <img src="image/footer-line.svg" alt="">
+            </div>
+            <div class="copyright">
+                <p>© 2026 Sandok.<br>All Rights Reserved.</p>
+                <p>#BigyanNgSANDOKyan<br>#SANDOKKaSakin</p>
+            </div>
+        </div>
+    </footer>
 
         <!-- RESERVATION DIALOG -->
         <dialog id="reservation-dialog" aria-labelledby="reservation-title">
