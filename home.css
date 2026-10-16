@@ -209,10 +209,10 @@
 .about {
     --about-space: 32px;
     scroll-margin-top: calc(-1 * var(--header-height));
-    height: calc(1212 * var(--u) + var(--about-space));
+    height: calc(1112 * var(--u) + var(--about-space));
     position: relative;
     text-align: center;
-    padding-top: calc(113 * var(--u) + var(--about-space));
+    padding-top: calc(13 * var(--u) + var(--about-space));
     font: calc(26 * var(--u))/1.2 'Minion Pro', 'Times New Roman', serif;
 }
 
@@ -229,7 +229,7 @@
 
 .serving-illustration {
     position: absolute;
-    top: calc(543 * var(--u) + var(--about-space));
+    top: calc(443 * var(--u) + var(--about-space));
     left: 35.56%;
     width: 24.394%;
     height: calc(364 * var(--u));
@@ -246,7 +246,7 @@
 
 .story {
     position: absolute;
-    top: calc(873 * var(--u) + var(--about-space));
+    top: calc(773 * var(--u) + var(--about-space));
     width: 74.19%;
     left: 12.9%;
 }
