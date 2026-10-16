@@ -288,7 +288,7 @@ h1 {
 
 /* Footer */
 footer {
-    margin-top: calc(64 * var(--u));
+    margin-top: 0;
     height: calc(345 * var(--u));
     background: var(--ink);
     color: white;
@@ -567,13 +567,44 @@ address > div > span:last-child {
     }
 
     .faqs {
-        height: auto;
-        display: block;
+        height: calc(840 * var(--u));
+        margin-top: calc(45 * var(--u));
+        display: grid;
+        grid-template-columns: 43.889% 56.111%;
+    }
+
+    .faq-right {
+    padding: 90px 70px 60px;
+    box-sizing: border-box;
+    }
+
+    .faq-item {
+    padding: 0 0 28px;
+    margin-bottom: 24px;
+    border-bottom: 1px solid #222;
+    }
+
+    .faq-item:last-child {
+    border-bottom: none;
+    }
+
+    .faq-item h3 {
+    margin: 0 0 8px;
+    font-size: 20px;
+    line-height: 1.3;
+    }
+
+    .faq-item p {
+    margin: 0;
+    max-width: 750px;
+    font-size: 17px;
+    line-height: 1.45;
     }
 
     .faq-heading {
-        padding: 30px 24px;
-        border-width: 1px 0;
+        background: var(--orange);
+        border: 1px solid var(--ink);
+        padding: calc(123 * var(--u)) 0 0 calc(115 * var(--u));
     }
 
     .faq-heading h2, .menu-page-title {
@@ -581,7 +612,8 @@ address > div > span:last-child {
     }
 
     .faq-heading h2 {
-        line-height: 1.2;
+        font-size: calc(128 * var(--u));
+        line-height: 1.42;
     }
 
     .faq-content {
